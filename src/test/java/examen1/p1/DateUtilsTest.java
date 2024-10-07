@@ -17,7 +17,7 @@ public class DateUtilsTest {
         assertEquals("WEDNESDAY", dateUtils.getDayOfWeek("2024-01-31"));
         assertEquals("SUNDAY", dateUtils.getDayOfWeek("2024-02-04"));
         assertEquals("FRIDAY", dateUtils.getDayOfWeek("2024-02-09"));
-        assertEquals("THURSDAY", dateUtils.getDayOfWeek("2024-02-29")); // Leap year
+        assertEquals("THURSDAY", dateUtils.getDayOfWeek("2024-02-29"));
         assertEquals("SATURDAY", dateUtils.getDayOfWeek("2024-03-02"));
         assertEquals("MONDAY", dateUtils.getDayOfWeek("2024-12-30"));
         assertEquals("TUESDAY", dateUtils.getDayOfWeek("2024-12-31"));
@@ -26,13 +26,13 @@ public class DateUtilsTest {
     @Test
     public void testGetDayOfWeek_InvalidDateFormat() {
         assertThrows(IllegalArgumentException.class, () -> {
-            dateUtils.getDayOfWeek("2024-01-32"); // Invalid day
+            dateUtils.getDayOfWeek("2024-01-32");
         });
         assertThrows(IllegalArgumentException.class, () -> {
-            dateUtils.getDayOfWeek("2024-02-30"); // Invalid day
+            dateUtils.getDayOfWeek("2024-02-30");
         });
         assertThrows(IllegalArgumentException.class, () -> {
-            dateUtils.getDayOfWeek("invalid-date"); // Invalid format
+            dateUtils.getDayOfWeek("invalid-date");
         });
     }
 }
